@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo_description"
+        app:layout_constraintEnd_toStartOf="@+id/imageChat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageSettings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/treender_logo" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageSettings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:contentDescription="@string/settings_description"
+        app:contentPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+        app:layout_constraintEnd_toStartOf="@+id/imageLogo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageLogo"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageChat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:contentDescription="@string/search_description"
+        app:contentPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
+        app:layout_constraintTop_toTopOf="@+id/imageLogo"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageTree"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/treeName"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:shapeAppearanceOverlay="@style/roundedShape"
+        app:srcCompat="@drawable/hosler_tree"
+        app:strokeWidth="1dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/treeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tree_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="@+id/imageTree"
+        app:layout_constraintBottom_toTopOf="@+id/locationText" />
+
+    <TextView
+        android:id="@+id/treeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/tree_id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/treeName"
+        app:layout_constraintStart_toEndOf="@+id/treeName"
+        app:layout_constraintTop_toTopOf="@+id/treeName" />
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tree_location"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/treeName"
+        android:layout_marginBottom="16dp"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/rewindIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:contentPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nopeIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/rewind_treender" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/nopeIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/boostIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rewindIcon"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/nope_treender" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/boostIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:contentPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/likeIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nopeIcon"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/boost_treender" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/likeIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/superLikeIcon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/boostIcon"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/like_treender" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/superLikeIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:contentPadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/likeIcon"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:shapeAppearanceOverlay="@style/circleShape"
+        app:srcCompat="@drawable/super_like_treender" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

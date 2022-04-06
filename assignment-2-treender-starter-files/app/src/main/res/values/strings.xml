@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Treender</string>
+    <string name="tree_name">HoslerOak,</string>
+    <string name="tree_id">#7863</string>
+    <string name="tree_location">Arboretum</string>
+    <string name="logo_description">App Logo</string>
+    <string name="settings_description">Settings</string>
+    <string name="search_description">Search</string>
+    <string name="shared_pref_assignment_2">edu.psu.ist.hcdd340.treender.assignment_2</string>
+</resources>
